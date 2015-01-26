@@ -13,5 +13,10 @@ describe('testing basic functions', function(){
     it('this test should fail!', function(){
         expect(returnKittens()).toBe("Not Kittens!");
     });
+
+    //this test is for yourMother
+    it("this is a test for our function!", function(){
+        expect(yourMother()).toBe("huge");
+    });
 });
 
