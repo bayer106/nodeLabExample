@@ -18,5 +18,19 @@ describe('testing basic functions', function(){
     it("this is a test for our function!", function(){
         expect(yourMother()).toBe("huge");
     });
+
+    it("this is a test for gradesTimesCredits", function(){
+        testGrade = 4.0;
+        testCredit = 5;
+        expect(gradesTimesCredits(testGrade, testCredit)).toBe(20);
+    });
+
+    it("this is a test for gpaCalculator", function(){
+        class1 = 3.0 * 4;
+        class2 = 1.0 * 2;
+        class3 = 4.0 * 3;
+        totalNumberOfCredits = 9;
+        expect(gpaCalc(totalNumberOfCredits, class1, class2, class3)).toBe(26/9);
+    });
 });
 
