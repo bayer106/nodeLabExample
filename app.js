@@ -67,7 +67,9 @@ app.get('gpa_calculator', function(req,res){
 });
 
 app.post('/gpa_calculator', function(req,res){
-    res.send("GPA: " + tools.gpaCalc((req.body.credit1 + req.body.credit2 + req.body.credit3),tools.gradeConversion(req.body.grade1),tools.gradeConversion(req.body.grade2),tools.gradeConversion(req.body.grade3)));
+   // console.log(req.body.grade1);
+    //console.log(req.body.grade2);
+    res.send("GPA: " + tools.gpaCalc((req.body.credit1 + req.body.credit2 + req.body.credit3),tools.gradesTimesCredits(tools.gradeConversion(req.body.grade1), req.body.credit1),tools.gradesTimesCredits(tools.gradeConversion(req.body.grade2), req.body.credit2),tools.gradesTimesCredits(tools.gradeConversion(req.body.grade3), req.body.credit3)));
 });
 
 // Starts the nodejs server on port 9000
