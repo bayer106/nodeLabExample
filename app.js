@@ -62,6 +62,10 @@ app.get('*', function(req, res){
 //    res.sendFile('404.html', options);
 });
 
+app.get('gpa_calculator', function(req,res){
+    res.sendFile('gpa_calculator.html', options);
+});
+
 // Starts the nodejs server on port 9000
 var server = app.listen(9000, function(){
    var host = server.address().address;

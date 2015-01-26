@@ -8,4 +8,7 @@ exports.addingStuff = function(str){
     return str + " the dog";
 };
 
+exports.yourMother = function(){
+  return "huge";
+};
 
