@@ -49,6 +49,7 @@ app.get('/petForm', function(req, res){
 app.post('/petForm', function(req, res){
     res.send(req.body.newPet + " String Length: " + tools.stringLength(req.body.newPet));
     console.log(req.body.newPet);
+    console.log(tools.addingStuff(req.body.newPet));
 });
 
 app.get('/', function(req, res){
