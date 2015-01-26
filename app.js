@@ -66,6 +66,10 @@ app.get('gpa_calculator', function(req,res){
     res.sendFile('gpa_calculator.html', options);
 });
 
+app.post('/gpa_calculator', function(req,res){
+    res.send("GPA: " + tools.gpaCalc((req.body.credit1 + req.body.credit2 + req.body.credit3),tools.gradeConversion(req.body.grade1),tools.gradeConversion(req.body.grade2),tools.gradeConversion(req.body.grade3)));
+});
+
 // Starts the nodejs server on port 9000
 var server = app.listen(9000, function(){
    var host = server.address().address;
