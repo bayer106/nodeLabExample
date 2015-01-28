@@ -70,6 +70,7 @@ app.post('/gpa_calculator', function(req,res){
    // console.log(req.body.grade1);
     //console.log(req.body.grade2);
     res.send("GPA: " + tools.gpaCalc((req.body.credit1 + req.body.credit2 + req.body.credit3),tools.gradesTimesCredits(tools.gradeConversion(req.body.grade1), req.body.credit1),tools.gradesTimesCredits(tools.gradeConversion(req.body.grade2), req.body.credit2),tools.gradesTimesCredits(tools.gradeConversion(req.body.grade3), req.body.credit3)));
+    //something in the math is going wrong and we didn't have time to fix it. 
 });
 
 // Starts the nodejs server on port 9000
